@@ -1,0 +1,17 @@
+@import './variables.scss';
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	list-style: none;
+}
+
+ul {
+	margin-bottom: $main-gap;
+}
+
+h2 {
+	margin-bottom: $main-gap;
+}
