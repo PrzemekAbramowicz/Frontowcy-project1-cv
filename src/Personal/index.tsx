@@ -1,28 +1,19 @@
+import { CVPersonal } from '../type';
 import './Personal.scss';
 
-interface CVData {
-	photo: string;
-	name: string;
-	lastName: string;
-	position: string;
-}
-
-const cvData: CVData = {
-	photo: '/public/assets/portrait.webp',
-	name: 'Przemysław',
-	lastName: 'Abramowicz',
-	position: 'Frontend Developer',
+type Props = {
+	data: CVPersonal;
 };
 
-const Personal = () => {
+const Personal = ({ data: { photo, name, lastName, position } }: Props) => {
 	return (
 		<aside className='cv-personal'>
 			<h2>Personal data</h2>
-			<img className='cv-photo' src={cvData.photo} alt={`${cvData.name} ${cvData.lastName} profile photo`} />
+			<img className='cv-photo' src={photo} alt={`${name} ${lastName} profile photo`} />
 			<p>
-				{cvData.name} {cvData.lastName}
+				{name} {lastName}
 			</p>
-			<small>{cvData.position}</small>
+			<small>{position}</small>
 		</aside>
 	);
 };
